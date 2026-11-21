@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-sama-orange: #F58220;
+  --color-sama-orange-hover: #E07315;
+  --color-sama-blue-light: #38BDF8;
+  --color-sama-navy: #123B67;
+  --color-sama-navy-dark: #0C2744;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    touch-action: manipulation;
+  }
+}
+
+@media print {
+  body.printing-receipt * {
+    visibility: hidden !important;
+  }
+  body.printing-receipt #thermal-receipt-print-area,
+  body.printing-receipt #thermal-receipt-print-area * {
+    visibility: visible !important;
+  }
+  body.printing-receipt #thermal-receipt-print-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--receipt-print-width, 80mm);
+    margin: 0;
+    padding: 4mm;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  body.printing-labels * {
+    visibility: hidden !important;
+  }
+  body.printing-labels #barcode-labels-print-area,
+  body.printing-labels #barcode-labels-print-area * {
+    visibility: visible !important;
+  }
+  body.printing-labels #barcode-labels-print-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 8mm;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}

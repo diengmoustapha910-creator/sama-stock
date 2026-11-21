@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-server/
+.git/
+.gitignore
+.env
+.env.*
+!.env.example
+.aistudio/
+.data/
+*.db
+*.db-wal
+*.db-shm
+*.log
+firebase-debug.log
+.DS_Store

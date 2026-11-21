@@ -1,0 +1,1033 @@
+# PROMPT COMPLET DE DÉVELOPPEMENT — SAMA STOCK
+
+## 1. RÔLE ET MISSION
+
+Tu es un architecte logiciel senior, développeur full-stack, expert en applications mobiles, systèmes SaaS, gestion commerciale, bases de données et sécurité informatique.
+
+Ta mission est de concevoir et développer **SAMA STOCK**, une application complète de gestion de stock et de facturation destinée aux commerçants, magasins, boutiques, grossistes, supermarchés, vendeurs en ligne et entreprises.
+
+Le produit doit être réellement fonctionnel, sécurisé, évolutif et commercialisable. Il ne doit pas se limiter à une maquette visuelle.
+
+### Identité du projet
+
+- Nom : SAMA STOCK
+- Slogan : « Gérez votre stock. Développez votre business. »
+- Langue : français.
+- Pays de lancement : Sénégal.
+- Devise par défaut : franc CFA (FCFA).
+- Couleurs : orange et bleu clair.
+- Public cible : tous les types de commerces.
+- Modèle commercial envisagé : application gratuite avec offres professionnelles et entreprise.
+
+### Plateformes obligatoires
+
+1. Site web responsive.
+2. Application Android.
+3. Application iPhone.
+4. Fonctionnement en ligne et hors connexion.
+5. Synchronisation des données entre appareils.
+6. Gestion de plusieurs utilisateurs et boutiques.
+
+Si un projet existe déjà, commence par examiner son architecture et ses fichiers. Conserve les fonctionnalités utiles, les données existantes et le code fonctionnel. Ne supprime rien sans autorisation.
+
+---
+
+## 2. IDENTITÉ VISUELLE ET DESIGN
+
+Utilise le logo officiel SAMA STOCK fourni comme référence graphique.
+
+### Palette de couleurs
+
+- Orange principal : `#F58220`
+- Bleu clair : `#38BDF8`
+- Bleu foncé : `#123B67`
+- Blanc : `#FFFFFF`
+- Gris clair : `#F3F6FA`
+- Rouge : alertes critiques et erreurs.
+- Vert : confirmations et opérations réussies.
+
+### Style de l'interface
+
+Créer une interface moderne, professionnelle, élégante et facile à comprendre.
+
+Utiliser :
+- Des tableaux de bord visuels.
+- Des cartes statistiques.
+- Des graphiques de ventes.
+- Des tableaux professionnels.
+- Des icônes cohérentes.
+- Des menus simples.
+- Des boutons visibles.
+- Des formulaires faciles à remplir.
+- Des messages d'erreur compréhensibles.
+- Des indicateurs de chargement et de synchronisation.
+- Une interface responsive pour téléphone, tablette et ordinateur.
+
+Le bleu foncé sera utilisé pour la navigation et les titres. Le bleu clair servira aux éléments secondaires. L'orange sera réservé aux actions principales et aux éléments à mettre en évidence.
+
+Créer également une icône d'application reconnaissable à partir du logo SAMA STOCK.
+
+---
+
+## 3. AUTHENTIFICATION ET INSCRIPTION
+
+Créer un système d'authentification sécurisé.
+
+Fonctionnalités :
+- Inscription d'un utilisateur.
+- Connexion par e-mail ou téléphone et mot de passe.
+- Vérification des coordonnées lorsque nécessaire.
+- Réinitialisation du mot de passe.
+- Déconnexion.
+- Gestion du profil.
+- Modification des informations personnelles.
+- Gestion des sessions.
+- Révocation des appareils connectés.
+- Suppression du compte selon une procédure sécurisée.
+
+À l'inscription, permettre à l'utilisateur de créer son entreprise et sa première boutique.
+
+Prévoir une procédure d'invitation des employés.
+
+Ne jamais stocker les mots de passe en clair.
+
+---
+
+## 4. GESTION DES ENTREPRISES, UTILISATEURS ET BOUTIQUES
+
+Chaque entreprise possède un espace privé isolé des autres entreprises.
+
+Un propriétaire peut gérer plusieurs boutiques depuis le même compte.
+
+### Rôles
+
+**Propriétaire**
+- Accès complet aux données de son entreprise.
+- Gestion des boutiques.
+- Gestion des utilisateurs et permissions.
+- Consultation des rapports.
+- Gestion des paramètres commerciaux.
+- Gestion des abonnements.
+
+**Administrateur**
+- Gestion quotidienne des produits, ventes, achats et stocks.
+- Gestion des utilisateurs selon les permissions accordées.
+
+**Gestionnaire de stock**
+- Entrées et sorties.
+- Inventaires.
+- Transferts entre boutiques autorisées.
+- Consultation des alertes.
+
+**Vendeur**
+- Enregistrement des ventes.
+- Consultation des produits disponibles.
+- Création de reçus.
+- Accès limité aux prix d'achat, bénéfices et rapports sensibles.
+
+**Comptable**
+- Consultation des factures.
+- Suivi des paiements.
+- Consultation des dépenses et rapports financiers autorisés.
+
+Les rôles et permissions doivent être configurables.
+
+Chaque opération importante doit enregistrer l'utilisateur responsable.
+
+L'isolation des données doit être contrôlée côté serveur et dans la base de données.
+
+---
+
+## 5. TABLEAU DE BORD PRINCIPAL
+
+Créer un tableau de bord affichant des données réelles provenant de la base de données.
+
+### Indicateurs
+
+- Nombre total de produits.
+- Nombre de références en stock.
+- Valeur du stock au coût d'acquisition.
+- Ventes du jour.
+- Ventes de la semaine.
+- Ventes du mois.
+- Coût des marchandises vendues.
+- Marge brute estimée.
+- Dépenses d'exploitation.
+- Résultat estimé.
+- Produits en stock faible.
+- Produits en rupture.
+- Factures impayées.
+- Dettes clients.
+- Dettes fournisseurs.
+- Dernières opérations.
+- Top 10 des produits vendus.
+
+### Graphiques
+
+- Évolution des ventes.
+- Ventes par période.
+- Ventes par boutique.
+- Produits les plus vendus.
+- Répartition des stocks par catégorie.
+- Évolution des marges.
+
+Ajouter des filtres par période, boutique, catégorie et utilisateur selon les permissions.
+
+Ne jamais utiliser de statistiques fictives dans une application en production.
+
+---
+
+## 6. GESTION DES PRODUITS
+
+Créer un module complet de gestion des produits.
+
+### Informations d'un produit
+
+- Nom.
+- Référence SKU.
+- Code-barres facultatif.
+- Photo.
+- Description.
+- Catégorie.
+- Marque.
+- Unité de mesure.
+- Prix d'achat.
+- Prix de vente.
+- Quantité disponible.
+- Seuil d'alerte.
+- Fournisseur principal.
+- Boutique ou emplacement.
+- Date de création.
+- Statut actif ou archivé.
+
+### Fonctionnalités
+
+- Ajouter un produit.
+- Modifier un produit.
+- Archiver un produit.
+- Rechercher par nom ou référence.
+- Filtrer par catégorie.
+- Scanner un code-barres.
+- Importer une liste depuis Excel ou CSV.
+- Exporter les produits.
+- Consulter l'historique des mouvements.
+- Gérer les variantes de produits.
+- Gérer les unités de mesure.
+- Gérer les lots et dates d'expiration lorsque nécessaire.
+
+Conserver l'historique des produits ayant déjà fait l'objet d'opérations.
+
+---
+
+## 7. GESTION DES STOCKS
+
+Créer un système fiable de suivi des entrées et sorties.
+
+### Types de mouvements
+
+- Stock initial.
+- Réception de marchandises.
+- Sortie manuelle autorisée.
+- Vente.
+- Retour client.
+- Retour fournisseur.
+- Transfert entre boutiques.
+- Ajustement d'inventaire.
+- Produit endommagé.
+- Produit perdu.
+
+Chaque mouvement contient :
+- Un identifiant unique.
+- Le produit.
+- La quantité.
+- Le type de mouvement.
+- La date et l'heure.
+- La boutique concernée.
+- L'utilisateur responsable.
+- Le motif.
+- La référence de l'opération.
+- Le statut de synchronisation si nécessaire.
+
+### Règles
+
+- Empêcher les quantités négatives par défaut.
+- Enregistrer toutes les modifications importantes.
+- Empêcher les doubles déductions.
+- Conserver un historique non destructif.
+- Utiliser des transactions de base de données pour les opérations critiques.
+- Contrôler les transferts entre boutiques.
+- Ne modifier le stock qu'à la réception effective des achats ou à la validation des ventes.
+
+---
+
+## 8. VENTES ET CAISSE
+
+Créer un point de vente (POS) rapide et adapté aux commerces.
+
+Fonctionnalités :
+- Recherche de produits.
+- Scanner un code-barres.
+- Panier de vente.
+- Modification des quantités.
+- Application de remises autorisées.
+- Calcul automatique du total.
+- Sélection du client.
+- Paiement intégral ou partiel.
+- Vente à crédit selon les permissions.
+- Impression ou partage d'un reçu.
+- Historique des ventes.
+- Retours et remboursements.
+- Ouverture et clôture de caisse.
+- Rapprochement de caisse.
+
+### Modes de paiement
+
+- Espèces.
+- Wave.
+- Orange Money.
+- Carte bancaire.
+- Virement.
+- Crédit client.
+- Autre mode configurable.
+
+Enregistrer le mode de paiement ne signifie pas que le paiement est confirmé.
+
+Les intégrations réelles à Wave, Orange Money ou aux cartes bancaires doivent utiliser des API ou prestataires officiels, avec vérification sécurisée des transactions.
+
+Une vente validée doit mettre à jour le stock une seule fois.
+
+---
+
+## 9. ACHATS ET FOURNISSEURS
+
+Créer un module de gestion des achats.
+
+### Fournisseurs
+
+Chaque fournisseur peut avoir :
+- Nom commercial.
+- Contact.
+- Téléphone.
+- E-mail.
+- Adresse.
+- Identifiants légaux facultatifs.
+- Historique des achats.
+- Solde restant dû.
+
+### Achats
+
+Fonctionnalités :
+- Création de commandes.
+- Réception partielle ou complète.
+- Enregistrement des prix d'achat.
+- Enregistrement des paiements.
+- Suivi des dettes fournisseurs.
+- Retours fournisseurs.
+- Historique des achats.
+- Impression de bons de commande.
+- Exportation des rapports.
+
+Une commande non reçue ne doit pas augmenter le stock.
+
+---
+
+## 10. CLIENTS ET CRÉDITS
+
+Créer un fichier client.
+
+Informations :
+- Nom.
+- Téléphone facultatif.
+- E-mail facultatif.
+- Adresse facultative.
+- Historique des achats.
+- Total des paiements.
+- Total des crédits.
+- Solde restant dû.
+
+Fonctionnalités :
+- Vente à crédit.
+- Paiements partiels.
+- Reçus de paiement.
+- Relevés de compte.
+- Historique des opérations.
+- Rappels de paiement.
+- Partage du relevé par WhatsApp.
+
+Protéger les données personnelles et limiter les accès.
+
+---
+
+## 11. MODULE COMPLET DE FACTURATION
+
+Développer un module professionnel de génération de factures directement intégré à SAMA STOCK.
+
+La facturation doit fonctionner sur le site web et les applications mobiles.
+
+### 11.1 Types de documents
+
+Permettre de générer :
+
+1. Facture de vente.
+2. Facture pro forma.
+3. Devis.
+4. Bon de commande.
+5. Bon de livraison.
+6. Reçu de paiement.
+7. Avoir.
+8. Relevé de compte client.
+
+Permettre de convertir un devis en facture sans ressaisir les données.
+
+Une facture pro forma ne doit pas être considérée automatiquement comme une facture définitive.
+
+### 11.2 Informations d'une facture
+
+Chaque facture doit contenir :
+
+- Logo de la boutique.
+- Nom de l'entreprise.
+- Coordonnées du vendeur.
+- Identifiants légaux ou fiscaux requis.
+- Numéro unique de facture.
+- Date d'émission.
+- Date d'échéance si nécessaire.
+- Nom et coordonnées du client.
+- Liste des produits ou services.
+- Référence de chaque produit.
+- Quantité.
+- Prix unitaire en FCFA.
+- Remises.
+- Taxes applicables.
+- Totaux intermédiaires.
+- Total à payer.
+- Montant déjà payé.
+- Solde restant dû.
+- Mode de paiement.
+- Conditions de règlement.
+- Mentions légales requises.
+- Notes complémentaires.
+
+### 11.3 Numérotation automatique
+
+Générer des numéros uniques, par exemple :
+
+- FAC-2026-0001.
+- FAC-2026-0002.
+- DEV-2026-0001.
+- PRO-2026-0001.
+- AVR-2026-0001.
+
+La numérotation doit rester unique en cas de création simultanée par plusieurs utilisateurs.
+
+Ne jamais réutiliser un numéro déjà attribué à un document émis.
+
+Prévoir des séries configurables selon les règles applicables à chaque entreprise.
+
+### 11.4 Design des factures
+
+Créer un modèle de facture professionnel respectant l'identité visuelle SAMA STOCK :
+
+- Orange #F58220.
+- Bleu clair #38BDF8.
+- Bleu foncé #123B67.
+- Fond blanc.
+- Logo en haut.
+- Tableau de produits lisible.
+- Totaux clairement mis en évidence.
+- Pied de page professionnel.
+
+Prévoir également la possibilité pour chaque entreprise d'utiliser son propre logo et ses coordonnées.
+
+Le format d'impression principal sera A4.
+
+### 11.5 Génération de PDF
+
+Le système doit réellement générer un fichier PDF téléchargeable.
+
+Actions disponibles :
+- Prévisualiser.
+- Télécharger le PDF.
+- Imprimer.
+- Partager par WhatsApp.
+- Envoyer par e-mail lorsqu'un service d'envoi est configuré.
+- Retrouver le PDF dans l'historique.
+
+La génération du PDF doit être fiable, avec une mise en page propre, sans texte coupé ni pages vides inutiles.
+
+Ne pas remplacer le PDF par une simple capture d'écran.
+
+### 11.6 Paiements de factures
+
+Permettre :
+- Paiement intégral.
+- Paiement partiel.
+- Paiements successifs.
+- Enregistrement de la date.
+- Choix du mode de paiement.
+- Génération de reçus.
+- Suivi du solde restant.
+
+Statuts possibles :
+- Brouillon.
+- Émise.
+- Partiellement payée.
+- Payée.
+- En retard.
+- Annulée selon une procédure autorisée.
+
+Le statut doit être calculé à partir des paiements enregistrés, des dates et des règles applicables.
+
+### 11.7 Liaison avec le stock
+
+Lorsqu'une facture de vente est validée :
+- Vérifier la disponibilité.
+- Enregistrer la vente.
+- Enregistrer les mouvements de stock.
+- Déduire les quantités une seule fois.
+- Actualiser les statistiques.
+- Conserver l'historique.
+
+Une facture en brouillon ne doit pas déduire définitivement le stock.
+
+Une facture pro forma ne doit pas réduire le stock comme une vente confirmée.
+
+Les avoirs, retours et annulations doivent produire des opérations correctives traçables.
+
+### 11.8 Historique des factures
+
+Créer une page dédiée avec :
+- Liste des factures.
+- Recherche par numéro.
+- Recherche par client.
+- Filtre par période.
+- Filtre par boutique.
+- Filtre par utilisateur.
+- Filtre par statut.
+- Total facturé.
+- Total encaissé.
+- Solde à recevoir.
+
+Permettre d'ouvrir une facture, de consulter les paiements associés et de télécharger le document.
+
+### 11.9 Personnalisation des documents
+
+Chaque boutique peut configurer :
+- Logo.
+- Nom commercial.
+- Coordonnées.
+- Identifiants légaux.
+- Pied de page.
+- Conditions de vente.
+- Coordonnées de paiement.
+- Format de numérotation.
+
+### 11.10 Conformité
+
+Prévoir les mentions fiscales et légales conformément à la réglementation sénégalaise applicable.
+
+Les taux de taxe et mentions doivent être configurables et validés avant la mise en production.
+
+Ne jamais inventer de certification, de numéro fiscal ou de conformité réglementaire.
+
+Ne pas modifier silencieusement une facture émise. Prévoir les procédures appropriées de correction, d'avoir ou d'annulation.
+
+---
+
+## 12. INVENTAIRES ET ALERTES
+
+Créer un module d'inventaire physique.
+
+Fonctionnalités :
+- Démarrer une session d'inventaire.
+- Compter les quantités réelles.
+- Comparer les quantités théoriques et physiques.
+- Afficher les écarts.
+- Faire valider les ajustements.
+- Générer un rapport.
+- Conserver l'historique.
+
+### Alertes
+
+- Stock faible.
+- Rupture.
+- Date d'expiration proche.
+- Écart d'inventaire.
+- Opération inhabituelle.
+- Facture en retard.
+
+Afficher les alertes dans l'application.
+
+Prévoir des notifications push ou e-mail si le service correspondant est configuré.
+
+---
+
+## 13. DÉPENSES ET RENTABILITÉ
+
+Créer un module de suivi des dépenses :
+
+- Loyer.
+- Transport.
+- Électricité.
+- Salaires.
+- Emballages.
+- Livraisons.
+- Maintenance.
+- Autres dépenses.
+
+Chaque dépense doit inclure une date, une catégorie, un montant, un motif et une pièce justificative facultative.
+
+Calculer séparément :
+
+- Chiffre d'affaires.
+- Coût des marchandises vendues.
+- Marge brute estimée.
+- Dépenses d'exploitation.
+- Résultat estimé.
+
+Utiliser une méthode cohérente de valorisation des stocks et de calcul du coût des marchandises vendues.
+
+Ne pas confondre les achats de marchandises avec les dépenses d'exploitation.
+
+Préciser que les résultats dépendent de la qualité des données enregistrées et ne constituent pas nécessairement des états comptables réglementaires.
+
+---
+
+## 14. RAPPORTS ET EXPORTATIONS
+
+Créer des rapports filtrables par période, boutique, utilisateur et catégorie.
+
+Rapports nécessaires :
+- Ventes.
+- Achats.
+- État des stocks.
+- Valorisation du stock.
+- Mouvements de stock.
+- Produits les plus vendus.
+- Produits invendus.
+- Produits en rupture.
+- Dépenses.
+- Dettes clients.
+- Dettes fournisseurs.
+- Factures émises.
+- Factures impayées.
+- Paiements reçus.
+- Marges et résultats estimés.
+- Performances par boutique.
+
+Formats :
+- PDF.
+- Excel.
+- CSV.
+
+Prévoir une mise en page adaptée à l'impression et au partage.
+
+---
+
+## 15. FONCTIONNEMENT HORS CONNEXION
+
+Le mode hors connexion est une exigence fondamentale.
+
+L'application doit pouvoir fonctionner sans Internet pour les opérations autorisées.
+
+### Fonctions hors connexion
+
+- Consultation des produits synchronisés.
+- Consultation des quantités locales.
+- Enregistrement de ventes.
+- Enregistrement de mouvements autorisés.
+- Préparation de factures.
+- Consultation de l'historique disponible localement.
+- Mise en attente des opérations à synchroniser.
+
+### Synchronisation
+
+Utiliser :
+- Une base locale.
+- Une file d'attente d'opérations.
+- Des identifiants uniques générés sur l'appareil.
+- Des mécanismes d'idempotence.
+- Des confirmations du serveur.
+- Des indicateurs de synchronisation.
+
+Au retour d'Internet :
+1. Envoyer les opérations en attente.
+2. Vérifier qu'elles n'ont pas déjà été traitées.
+3. Contrôler les permissions.
+4. Contrôler les conflits.
+5. Enregistrer les opérations valides.
+6. Confirmer les résultats.
+7. Actualiser les données locales.
+
+### Gestion des conflits
+
+Lorsque plusieurs appareils modifient le stock simultanément, appliquer des règles transactionnelles côté serveur.
+
+Ne pas écraser silencieusement les données.
+
+Signaler les conflits et proposer une résolution explicite.
+
+Les factures préparées hors connexion peuvent utiliser un identifiant provisoire local. Le numéro définitif doit être attribué de manière sûre, sans doublons, selon les règles de numérotation.
+
+Afficher clairement les opérations en attente ou en échec.
+
+---
+
+## 16. ARCHITECTURE TECHNIQUE
+
+Choisir une architecture moderne, documentée et maintenable.
+
+Architecture proposée :
+
+- Application mobile : Flutter.
+- Site web : Next.js et TypeScript.
+- Backend : NestJS et TypeScript.
+- API : REST sécurisée, documentée avec OpenAPI.
+- Base de données serveur : PostgreSQL.
+- Base locale mobile : SQLite.
+- Base locale web : IndexedDB.
+- Authentification sécurisée.
+- Stockage de fichiers privé.
+- Notifications push.
+- Hébergement cloud évolutif.
+- Migrations versionnées.
+- Tests automatisés.
+- Journalisation et surveillance.
+
+Cette architecture peut être adaptée si une alternative satisfait mieux les exigences, notamment le fonctionnement hors connexion.
+
+Ne choisis pas des technologies uniquement parce qu'elles sont populaires. Vérifie leur compatibilité avec toutes les exigences.
+
+Documenter les décisions d'architecture.
+
+---
+
+## 17. STRUCTURE DE LA BASE DE DONNÉES
+
+Prévoir au minimum les entités suivantes :
+
+- users
+- organizations
+- organization_members
+- roles
+- permissions
+- stores
+- store_members
+- products
+- product_variants
+- categories
+- stock_locations
+- stock_movements
+- stock_balances
+- suppliers
+- customers
+- purchases
+- purchase_items
+- sales
+- sale_items
+- invoices
+- invoice_items
+- invoice_sequences
+- quotes
+- delivery_notes
+- credit_notes
+- payments
+- payment_allocations
+- customer_credits
+- supplier_payments
+- expenses
+- inventory_sessions
+- inventory_items
+- notifications
+- audit_logs
+- subscriptions
+- devices
+- sync_operations
+
+Adapter la structure si nécessaire pour garantir la cohérence des données.
+
+Utiliser :
+- Des clés primaires.
+- Des clés étrangères.
+- Des contraintes d'intégrité.
+- Des index appropriés.
+- Des transactions.
+- Des règles d'unicité.
+- Des dates de création et de modification.
+- Une stratégie de conservation de l'historique.
+
+Les données commerciales doivent être rattachées à une entreprise. Les opérations propres à une boutique doivent inclure son identifiant.
+
+Les opérations critiques ne doivent pas être réalisées uniquement dans le navigateur.
+
+---
+
+## 18. SÉCURITÉ
+
+Mettre en place :
+- HTTPS obligatoire.
+- Hachage sécurisé des mots de passe.
+- Gestion des sessions.
+- Autorisations côté serveur.
+- Isolation stricte des entreprises.
+- Validation de toutes les entrées.
+- Protection contre les injections SQL.
+- Limitation des tentatives de connexion.
+- Gestion sécurisée des jetons.
+- Protection contre les abus d'API.
+- Journalisation des opérations sensibles.
+- Sauvegardes régulières.
+- Tests de restauration.
+- Chiffrement adapté des données sensibles.
+- Gestion sécurisée des secrets.
+
+Ne jamais exposer de clés privées ou de mots de passe dans le code source public.
+
+Ne pas donner accès à une entreprise aux données d'une autre.
+
+Limiter l'accès aux informations financières selon les permissions.
+
+---
+
+## 19. ABONNEMENTS ET MONÉTISATION
+
+Prévoir une architecture permettant de commercialiser SAMA STOCK.
+
+Formules possibles :
+
+**Gratuit**
+- Nombre limité de produits.
+- Une boutique.
+- Fonctions essentielles.
+
+**Professionnel**
+- Plus de produits.
+- Rapports avancés.
+- Factures PDF.
+- Gestion des employés.
+
+**Entreprise**
+- Plusieurs boutiques.
+- Permissions avancées.
+- Analyses consolidées.
+- Fonctionnalités supplémentaires.
+
+Les tarifs, limites et fonctionnalités doivent être configurables par l'administrateur.
+
+Ne pas imposer de tarifs définitifs sans décision du propriétaire du projet.
+
+Prévoir une période de grâce et un accès raisonnable aux données en cas d'expiration d'abonnement.
+
+---
+
+## 20. ADMINISTRATION DE LA PLATEFORME
+
+Créer un espace administrateur distinct de l'espace des commerçants.
+
+Fonctionnalités :
+- Gestion des entreprises inscrites.
+- Gestion des formules.
+- Gestion des abonnements.
+- Configuration des limites.
+- Gestion des paramètres globaux.
+- Suivi de la disponibilité du service.
+- Consultation des journaux techniques autorisés.
+- Gestion des incidents.
+- Suspension contrôlée des comptes en cas de nécessité.
+
+L'administrateur de la plateforme ne doit pas consulter arbitrairement les données commerciales privées.
+
+Tout accès exceptionnel doit être limité, autorisé et journalisé.
+
+---
+
+## 21. TESTS ET QUALITÉ
+
+Créer des tests unitaires, d'intégration et de bout en bout.
+
+Tester au minimum :
+- Inscription et connexion.
+- Rôles et permissions.
+- Isolation des entreprises.
+- Création et modification des produits.
+- Entrées et sorties de stock.
+- Ventes et retours.
+- Achats et réceptions.
+- Paiements partiels.
+- Génération des factures.
+- Génération et téléchargement des PDF.
+- Calcul des remises et taxes.
+- Numérotation des factures.
+- Création des avoirs.
+- Synchronisation hors connexion.
+- Prévention des doublons.
+- Conflits de stock.
+- Rapports.
+- Exportations.
+- Sauvegardes et restauration.
+
+Tester sur :
+- Android.
+- iPhone.
+- Ordinateurs.
+- Tablettes.
+- Navigateurs modernes.
+
+Les calculs financiers et les mouvements de stock critiques doivent être vérifiés côté serveur.
+
+---
+
+## 22. PHASES DE DÉVELOPPEMENT
+
+### Phase 1 — Fondations
+
+- Structure du projet.
+- Base de données.
+- Authentification.
+- Entreprises et boutiques.
+- Gestion des rôles.
+- Design général.
+- API sécurisée.
+
+### Phase 2 — Gestion du stock
+
+- Produits.
+- Catégories.
+- Entrées et sorties.
+- Historique.
+- Alertes.
+- Inventaires.
+- Tableau de bord.
+
+### Phase 3 — Ventes et facturation
+
+- Point de vente.
+- Clients.
+- Ventes.
+- Factures.
+- Devis.
+- Factures pro forma.
+- Avoirs.
+- Paiements.
+- Reçus PDF.
+- Impression et partage.
+
+### Phase 4 — Gestion commerciale avancée
+
+- Achats.
+- Fournisseurs.
+- Dépenses.
+- Crédits.
+- Rapports.
+- Exportations.
+
+### Phase 5 — Hors connexion
+
+- Bases locales.
+- File d'attente.
+- Synchronisation.
+- Résolution des conflits.
+- Tests multi-appareils.
+
+### Phase 6 — Applications mobiles et mise en production
+
+- Finalisation Android.
+- Finalisation iPhone.
+- Tests de sécurité.
+- Tests de performance.
+- Sauvegardes.
+- Déploiement.
+- Documentation.
+
+Les phases peuvent se chevaucher si cela ne compromet pas la qualité.
+
+---
+
+## 23. CRITÈRES D'ACCEPTATION
+
+Le MVP doit permettre de :
+
+1. Créer une entreprise et sa boutique.
+2. Créer plusieurs utilisateurs.
+3. Attribuer des rôles et permissions.
+4. Créer et rechercher des produits.
+5. Enregistrer les entrées et sorties de stock.
+6. Réaliser des ventes.
+7. Générer des factures PDF réelles.
+8. Imprimer et partager les factures.
+9. Enregistrer les paiements.
+10. Suivre les soldes clients.
+11. Afficher les alertes de stock.
+12. Utiliser les fonctions hors connexion prévues.
+13. Synchroniser les opérations sans duplication.
+14. Protéger les données entre entreprises.
+15. Produire des rapports cohérents.
+16. Afficher les montants en FCFA.
+17. Fonctionner sur mobile et ordinateur.
+18. Sauvegarder et restaurer les données.
+19. Passer les tests essentiels.
+20. Fournir une documentation d'installation et d'utilisation.
+
+---
+
+## 24. LIVRABLES OBLIGATOIRES
+
+À la fin du développement, fournir :
+
+- Code source organisé.
+- Backend fonctionnel.
+- Interface web responsive.
+- Application mobile Android.
+- Projet mobile iPhone.
+- Schéma de base de données.
+- Migrations.
+- Documentation API.
+- Fichier de configuration d'exemple sans secrets.
+- Instructions d'installation.
+- Instructions de déploiement.
+- Tests automatisés.
+- Documentation de sécurité.
+- Documentation de synchronisation hors connexion.
+- Guide utilisateur en français.
+- Modèles de factures PDF.
+- Procédure de sauvegarde et de restauration.
+
+Distinguer clairement les fonctionnalités développées, celles qui sont en test et celles qui restent à terminer.
+
+Ne jamais prétendre qu'une application a été publiée sur les stores si cela n'a pas été réellement effectué.
+
+---
+
+## 25. INSTRUCTIONS FINALES À L'IA DE DÉVELOPPEMENT
+
+Commence par analyser l'environnement et les fichiers existants.
+
+Si le projet existe déjà, conserve sa structure utile et ses données. Ne supprime aucun fichier ou fonctionnalité sans autorisation.
+
+Avant de coder, présente :
+- L'architecture retenue.
+- La structure des dossiers.
+- Le modèle de données.
+- Les principales étapes de développement.
+- Les risques techniques.
+- La stratégie hors connexion.
+
+Ensuite, développe progressivement des fonctionnalités réelles et testables.
+
+Ne crée pas de faux boutons, de fausses statistiques, de fausses factures ou de fausses intégrations de paiement.
+
+Ne simule pas le fonctionnement d'une API réelle.
+
+N'invente pas de clés API, de certificats ou de résultats de tests.
+
+À la fin de chaque phase, indique :
+- Les fonctionnalités terminées.
+- Les fichiers créés ou modifiés.
+- Les tests réellement exécutés.
+- Les résultats obtenus.
+- Les problèmes restant à résoudre.
+- Les prochaines étapes.
+
+**OBJECTIF FINAL :** livrer SAMA STOCK, une solution professionnelle de gestion de stock, ventes, achats et facturation, utilisable sur Android, iPhone et web, avec une identité visuelle orange et bleu clair, une devise en FCFA, une gestion multi-boutiques et un mode hors connexion fiable.
+
+La priorité est la fiabilité des stocks, l'exactitude des factures, la sécurité des données et la simplicité d'utilisation pour les commerçants sénégalais.
